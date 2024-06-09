@@ -1,3 +1,10 @@
+# E-COM    
+
+### Hosted Link: https://ecom-fs.vercel.app
+
+### Backend Repo: https://github.com/Akash-Rajmane/ECOM-BE
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
