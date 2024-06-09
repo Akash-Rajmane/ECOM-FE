@@ -364,7 +364,7 @@ const CartContextProvider = (props) => {
     }
 
     const quantityChangeHandler = (el,quantity) => {
-        const id = {el};
+        const id = el.id;
         const payload = {id,quantity}
         if(isAuthenticated){
             //quantity = curr
