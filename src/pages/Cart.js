@@ -23,11 +23,11 @@ useEffect(() => {
                     'Authorization': `Bearer ${token}` 
                 }
             });
-           // console.log(res);
+          // console.log(res);
     
             if (res.ok) {
                 const payload = await res.json();
-              //  console.log(data);
+          //      console.log(payload, "fecth cart");
                 setCart(payload);
             } else {
              

@@ -155,7 +155,8 @@ const CartContextProvider = (props) => {
     
             if (res.ok) {
                 const dbCart = await res.json();
-                dispatch({ type: "SET_CART", payload: dbCart });
+               // console.log(dbCart,"update cart")
+                
                 localStorage.removeItem('cart'); // Clear local storage after updating server cart
             } else {
                 const errorData = await res.json();
@@ -205,10 +206,10 @@ const CartContextProvider = (props) => {
           //  console.log(res);
             if (res.ok) {
 
-                const dbCart = await res.json();
-           //     console.log(dbCart);
+                const {message,dbCart} = await res.json();
+            //    console.log(dbCart,"add cart");
                 dispatch({type:"ADD", item});
-                toast.success("Selected item has been added to cart successfully!");
+                toast.success(message);
             }
 
         } catch (err) {
@@ -257,10 +258,10 @@ const CartContextProvider = (props) => {
                 },
             });
     
-            console.log(res);
+          //  console.log(res);
             if (res.ok) {
                 const dbCart = await res.json();
-                console.log(dbCart);
+          //      console.log(dbCart);
                 dispatch({ type: "REMOVE_ALL" });
                 toast.success("Your order has been placed successfully!");
             } else {
